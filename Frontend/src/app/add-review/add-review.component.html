@@ -1,0 +1,77 @@
+<!-- <div class='card'>
+  <form (ngSubmit)="editMobile()" class='bg-pic'>
+    <div class='card-header'>
+      Add Review
+    </div>
+    <div class='card-body'>
+      <div class='table-responsive'>
+        <table class='table'>
+
+          <tbody>
+            <tr>
+              <td> <label>Device Name</label></td>
+              <td><input type="text" name="d_name" [(ngModel)]="mobileItem.Name" /></td>
+            </tr>
+            <br>
+            <tr>Add Review</label></td>
+              <td><input type="text" name="d_model" [(ngModel)]="mobileItem.Model"
+              <td><label>  /></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label>Device Storage</label></td>
+                <td><input type="text" name="d_storage" [(ngModel)]="mobileItem.Storage"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Device Version</label></td>
+                <td><input type="text" name="d_version" [(ngModel)]="mobileItem.Version"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Review</label></td>
+                <td><input type="text" name="d_review" [(ngModel)]="mobileItem.Review"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>CPU</label></td>
+                <td><input type="text" name="d_cpu" [(ngModel)]="mobileItem.CPU"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Price</label></td>
+                <td><input type="text" name="d_price" [(ngModel)]="mobileItem.Price"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Mobile imageUrl</label></td>
+                <td><input type="text" name="d_image" [(ngModel)]="mobileItem.imageUrl"/></td>                  
+              </tr>  
+            <tr>
+              <td></td>
+              <td><input type="submit" value="Add Review" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div> -->
+
+<form (ngSubmit)="editMobile()">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h3>Add Review</h3>
+      <div class="col-md-8 form-group row justify-content-center">
+        <label class="text-muted col-12" for="devicename">Device Name:
+          <input class="form-control" type="text" name="devicename" placeholder="Enter Device Name"
+            [(ngModel)]="mobileItem.Name" id="devicename"></label>
+        <label class="text-muted col-12" for="review">Device Review:
+          <textarea class="form-control" name="review" id="review" placeholder="Enter Device Review" cols="30" rows="5"
+            [(ngModel)]="mobileItem.Model"></textarea>
+        </label>
+        <br>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="ADD REVIEW" /></td>                  
+        </tr>             
+      </div>
+
+    </div>
+  </div>
+</form>

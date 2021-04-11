@@ -1,0 +1,24 @@
+
+#mark{
+    color: rgb(95, 164, 243);
+    font: 1.5em Cursive;
+}
+h1 {
+    font-family:cursive
+
+}
+h1{
+    color:rgb(82, 8, 8);
+    text-decoration: underline;
+}
+#bg {
+    /* The image used */
+    background-image: url("../assets/images/2.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    color: rgb(15, 34, 141);
+    font-weight: bolder;
+    background-size: 100% ;  
+    background-size: cover; 
+  }

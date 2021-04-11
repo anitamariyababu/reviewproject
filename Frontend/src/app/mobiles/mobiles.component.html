@@ -1,0 +1,52 @@
+<div class='card'>
+    <div class='card-header'>
+     {{pageTitle}}
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table bg-pic'
+              *ngIf = 'mobiles && mobiles.length'>
+          <thead>
+            <tr>
+              <th>
+                <button class='btn btn-primary'
+                (click)='toggleImage()'>
+                  {{showImage? 'Hide' : 'Show'}} Image
+                </button>
+              </th>
+              <th>Name</th>
+              <th>Model</th>
+              <th>Storage</th>
+              <th>CPU</th>
+              <th>Review</th>
+              <th>Price</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let mobile of mobiles'>
+                  <td><img *ngIf='showImage'
+                    [src] = 'mobile.imageUrl' 
+                    [title] = 'mobile.Name'
+                    [style.width.px] = 'imageWidth' 
+                    [style.margin.px] = 'imageMargin'></td>
+                  <td>{{ mobile.Name|uppercase }}</td>
+                  <td>{{ mobile.Model }}</td>
+                  <td>{{ mobile.Storage }}</td>
+                  <td>{{ mobile.CPU }}</td>
+                  <td>{{ mobile.Review }}</td>
+                  <td>{{ mobile.Price }}</td>
+                  <td>
+                    <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn()" routerLink="/edit/{{mobile._id}}" style="margin-left: 20px;"> Edit</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="deleteMobile(mobile)"> Delete</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,52 @@
+<div class='card'>
+    <form (ngSubmit)="AddMobiles()" class='bg-pic'>
+<div class='card-header'>
+ ADD Mobile
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>Mobile Name</label></td>
+              <td><input type="text" name="d_name" [(ngModel)]="mobileItem.Name"/></td>                  
+            </tr>   
+            <tr>
+                <td><label>Mobile Model</label></td>
+                <td><input type="text" name="d_model" [(ngModel)]="mobileItem.Model"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Storage</label></td>
+                <td><input type="text" name="d_storage" [(ngModel)]="mobileItem.Storage"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Version</label></td>
+                <td><input type="text" name="d_version" [(ngModel)]="mobileItem.Version"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Review</label></td>
+                <td><input type="text" name="d_review" [(ngModel)]="mobileItem.Review"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>CPU</label></td>
+                <td><input type="text" name="d_cpu" [(ngModel)]="mobileItem.CPU"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Price</label></td>
+                <td><input type="text" name="d_price" [(ngModel)]="mobileItem.Price"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Mobile imageUrl</label></td>
+                <td><input type="text" name="d_image" [(ngModel)]="mobileItem.imageUrl"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

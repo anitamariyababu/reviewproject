@@ -1,0 +1,51 @@
+
+<div class="row justify-content-center">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-4 mymargin">
+      <form (ngSubmit)="submit()">
+         <h2>Sign Up</h2> 
+         <div class="login-cont">
+            <label >First Name</label>
+            <input type="text" name="firstname" placeholder="enter your First Name" [(ngModel)]="user.firstName" style="width:100%;height:2rem;">
+         </div>  
+         <br>
+         <div class="login-cont">
+            <label >Last Name</label>
+            <input type="text" name="lastname" placeholder="enter your Last Name" [(ngModel)]="user.lastName" style="width:100%;height:2rem;">
+         </div>  
+         <br>
+         <div class="login-cont" >
+            <label >PhoneNumber</label>
+            <input type="tel" name="phone" [(ngModel)]="user.phone" pattern="^[1-9]\d{2}-\d{3}-\d{4}$|^([1-9]\d{2}).(\d{3}).(\d{4})$|^([1-9]\d{2}) (\d{3}) (\d{4})$|^([1-9]\d{2})(\d{3})(\d{4})$"required placeholder="enter the Number" style="width:100%;height:2rem;">
+         </div>
+            <label for="numbererror" id="numbererror"></label>   
+         <br>
+         <div class="login-cont">
+            <label >Email</label>
+            <input type="text" name="email" placeholder="enter the emailaddress" [(ngModel)]="user.email" id="email" style="width:100%;height:2rem;">
+         </div>  
+            <label for="error" id="error"></label> 
+         <br>  
+          <div class="login-cont">
+             <label >CreatePassword</label>
+             <input type="password" name="password" id="pwd" placeholder="enter the password" [(ngModel)]="user.password"  style="width:100%;height: 2rem;">
+          </div>
+          <label for="error4" id="error4"></label> 
+          <br>
+          <div class="login-cont">
+             <label >ConfirmPassword</label>
+             <input type="password" id="pwd2" name="confpass" placeholder="enter the password" [(ngModel)]="confirmpass" style="width:100%;height: 2rem;">
+         </div>
+         <label for="error5" id="error5"></label> 
+         <br>
+        <div>
+            <button id="login-button" type="submit">Sign Up</button>
+        </div>
+        <div class="login-misc">
+            <h5>Already have an account</h5>
+            <a href="signin.html">Sign In</a>
+        </div>
+    </form>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
